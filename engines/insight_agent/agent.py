@@ -5,6 +5,7 @@ async def invoke_insight_agent(query: str,
                                role: str,
                                llm_client: LLMClient,
                                out_put_dir: str,
-                               process_callback=lambda update: {update}
+                               process_callback
                                ):
     pass
+

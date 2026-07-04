@@ -6,6 +6,8 @@ from engines.common.progress import ProgressUpdate
 from engines.insight_agent.agent import invoke_insight_agent
 from engines.media_agent.agent import invoke_media_agent
 from engines.common.runtime.role_log import route_logs_by_role
+from engines.common.eventing.publishers import pub_role_result, pub_role_error, pub_role_progress
+from engines.common.eventing.event import RoleResultEvent, RoleErrorEvent, RoleProgressEvent
 
 ProgressCallback = Callable[[ProgressUpdate], None]
 AgentInvoker = Callable[[str, str, LLMClient, str, ProgressCallback], Awaitable[None]]
@@ -43,17 +45,17 @@ async def _run_research_role_task(role: str, query: str):
     """
     with route_logs_by_role(role):
         # 1. 发布启动研究任务事件
-
+        _publish_role_progress(role=role,update=ProgressUpdate(status="starting",message="开始执行研究",progress_pct=0))
         # 2. 执行指定角色的研究Agent
         try:
             await _execute_research_flow(role, query)
             # 3.  发布研究结果事件
-        except Exception as  e:
+            pub_role_result(RoleResultEvent(role=role))
+
+        except Exception as e:
             logger.error(f"{role} 研究智能体执行期间出现了异常: {str(e)}")
             # 4.  发布研究失败事件
-
-
-
+            pub_role_error(RoleErrorEvent(role=role, error=str(e)))
 
 
 async def _execute_research_flow(role: str, query: str):
@@ -63,11 +65,19 @@ async def _execute_research_flow(role: str, query: str):
     # 2. 获取指定角色Agent的报告落盘目录
     output_dir = ""
 
-    # 3. 运行指定角色的Agent
+    # 3. 运行指定角色的Agent[INSIGHT]
     await _RESEARCH_INVOKER[role](
         query,
         role,
         llm_client,
         output_dir,
-        lambda update: {}
+        lambda update: _publish_role_progress(role, update)
     )
+
+def _publish_role_progress(role: str, update: ProgressUpdate):
+    pub_role_progress(RoleProgressEvent(role=role,
+                                        status= update.status,
+                                        message= update.message,
+                                        progress_pct=update.progress_pct
+                                        ))
+
