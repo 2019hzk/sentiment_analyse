@@ -13,9 +13,6 @@ def start_host_endpoint(service: HostServiceDep):
         return HostStateResponse(host_running=True)
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
-
-
-
 @router.get("/stop", response_model=HostStateResponse, description="停止主持人讨论接口")
 def stop_host_endpoint(service: HostServiceDep):
     try:
