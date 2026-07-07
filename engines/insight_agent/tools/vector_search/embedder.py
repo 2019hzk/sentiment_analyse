@@ -37,7 +37,8 @@ class BgeM3Embedder:
         output = self._model.encode(
             items,
             return_dense=True,
-            return_sparse=True
+            return_sparse=True,
+            return_colbert_vecs=False,
         )
         dense_vectors = output["dense_vecs"]
         sparse_vectors = output["lexical_weights"]

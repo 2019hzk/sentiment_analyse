@@ -5,15 +5,15 @@ from datetime import datetime
 
 @dataclass
 class SearchRecord:
-    mysql_pk: int
+    mysql_pk: str
     platform: str
     source_table: str
     title_or_content: str
     published_at: datetime
-    source_keyword: str
 
-    engagement: dict[str, int] = field(default_factory=dict)
-    hotness_score: float = None
+    source_keyword: Optional[str] = None
+    engagement: dict[str, float] = field(default_factory=dict)
+    hotness_score: Optional[float] = None
 
 
 @dataclass

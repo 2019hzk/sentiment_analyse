@@ -4,7 +4,7 @@ from engines.insight_agent.tools.db_search.queries.columns import (
     comment_search_columns,
     engagement_metric_columns, hot_score_metric_column,
 )
-from engines.insight_agent.tools.db_search.hotness import HotRecallPeriod, hot_recall_start_time
+from engines.insight_agent.tools.hotness import HotRecallPeriod, hot_recall_start_time
 from sqlalchemy import select, or_, desc, column, table, bindparam, union_all
 from sqlalchemy.sql import Select
 
@@ -14,7 +14,8 @@ def build_hotness_query(
         time_period: HotRecallPeriod,
         limit: int,
 ) -> Select:
-    """构建单平台热门召回查询 提取指定时间段内内容表与评论表的高热度数据，联合并返回。"""
+    """构建单平台热门召回查询 提取指定时间段内“内容表”与“评论表”的高热度数据，联合并返回。
+    """
 
     # 1. 获取时间窗口的起始时间戳
     start_time = hot_recall_start_time(time_period)
@@ -68,12 +69,13 @@ def build_content_search_query(
         column(field).like(bindparam(f"term_{content_mapping.table_name}_{i}", search_term))
         for i, field in enumerate(content_mapping.search_fields)
     ]
-
+    hot_score_expr = hot_score_metric_column(content_mapping)
     # 2. 组装并返回查询 应用or条件匹配
     return (
         select(
             *content_search_columns(platform_mapping),
-            *engagement_metric_columns(content_mapping.engagement_cols)
+            *engagement_metric_columns(content_mapping.engagement_cols),
+            hot_score_expr
         )
         .select_from(table(content_mapping.table_name))
         .where(or_(*where_clauses))
@@ -94,10 +96,12 @@ def build_comment_search_query(platform_mapping: PlatformSearchMapping,
         for i, field in enumerate(comment_mapping.search_fields)
     ]
 
+    hot_score_expr = hot_score_metric_column(comment_mapping)
     # 2. 组装并返回查询：应用or条件匹配
     return (
         select(*comment_search_columns(platform_mapping),
-               *engagement_metric_columns(comment_mapping.engagement_cols))
+               *engagement_metric_columns(comment_mapping.engagement_cols),
+               hot_score_expr)
         .select_from(table(comment_mapping.table_name))
         .where(or_(*where_clauses))
         .order_by((column("id")))
