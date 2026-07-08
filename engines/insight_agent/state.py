@@ -7,3 +7,7 @@ class InsightState(TypedDict):
     query: str
     role: str
     evidence_pool: EvidencePool
+
+
+
+

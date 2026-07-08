@@ -5,7 +5,6 @@ import jieba.analyse
 from dataclasses import dataclass
 from typing import Literal, Optional
 from loguru import logger
-from sympy.strategies.core import switch
 
 from engines.insight_agent.evidence.models import EvidenceRecord, Engagement, RetrievalMeta
 from engines.insight_agent.tools.db_search.repository import DatabaseSearchRepository
@@ -187,15 +186,43 @@ if __name__ == '__main__':
     async def main_test():
         retriever = InsightRetrivalService()
         test_query = "高考难吗"
-        tasks = build_retrieval_tasks(test_query)
-        logger.info(f"生成了 {len(tasks)} 个 DB 召回任务: {[t.channel for t in tasks]}")
 
-        db_results = await retriever._retrival_db_evidence(tasks)
+        logger.info(f"测试3 整体编排召回, Query: '{test_query}'")
+        all_results = await retriever.retrival_evidence(test_query)
+        logger.info(f"整体召回完成，总计汇总证据: {len(all_results)} 条")
 
-        logger.info(f"DB召回完成，共获取证据: {len(db_results)} 条")
+        # 各个通道的分布情况
+        channel_counts = {}
+        for r in all_results:
+            ch = r.retrieval.retrieval_channels[0]
+            channel_counts[ch] = channel_counts.get(ch, 0) + 1
 
-        for record in db_results:
-            print(record)
+        logger.info(f"通道分布统计: {channel_counts}")
+
+        # tasks = build_retrieval_tasks(test_query)
+        # logger.info(f"生成了 {len(tasks)} 个 DB 召回任务: {[t.channel for t in tasks]}")
+        #
+        #
+        # # 获取所有检索结果
+        # db_results = await retriever._retrival_db_evidence(tasks)
+        #
+        # logger.info(f"DB召回完成，共获取证据: {len(db_results)} 条")
+        # grouped_results = defaultdict(list)
+        # for record in db_results:
+        #     query = record.retrieval.matched_queries[0]
+        #     channel = record.retrieval.retrieval_channels[0]
+        #     grouped_results[(query, channel)].append(record)
+        #
+        # print("词、通道检索结果统计：")
+        #
+        # for (query, channel), records in grouped_results.items():
+        #     # 打印每个分类的汇总数量
+        #     print(f"检索词: 【{query}】 | 通道: 【{channel}】 | 记录数: {len(records)} 条")
+        #     for idx, record in enumerate(records, 1):
+        #         short_content = record.content[:50] + '...'
+        #         print(f"   [{idx}] ID: {record.id} | 表: {record.source_table} | 内容: {short_content}")
+        #
+        #     print("-" * 60)
 
 
     asyncio.run(main_test())
