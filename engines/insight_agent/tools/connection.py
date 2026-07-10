@@ -12,7 +12,7 @@ def get_async_engine() -> AsyncEngine:
     global engine
 
     if engine is None:
-        engine = create_async_engine(url=_build_db_url(), echo=True)
+        engine = create_async_engine(url=_build_db_url(), echo=False)
     return engine
 
 

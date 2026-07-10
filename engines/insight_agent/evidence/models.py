@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
-from typing import Any, Optional
+from typing import Optional, Literal
+
+EvidenceStrength = Literal["missing", "weak", "medium", "strong"]
 
 
 # 第一组：元数据
@@ -75,3 +77,10 @@ class EvidencePool:
     clusters: list[EvidenceCluster] = field(default_factory=list)
 
 
+@dataclass(slots=True)
+class SectionEvidencePack:
+    """章节证据包(LLM 写作文本块  + 缺口说明)。"""
+    used_query: str = ""
+    evidence_count: int = 0
+    strength: EvidenceStrength = "missing"
+    evidence_source_blocks: list[str] = field(default_factory=list)

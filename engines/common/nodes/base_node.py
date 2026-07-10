@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Any, Protocol, runtime_checkable
+from engines.common.llm.llm_client import LLMClient
 
 
 @dataclass(frozen=True)
@@ -13,6 +14,9 @@ class ProgressUpdate:
 @runtime_checkable
 class ResearchNodeContext(Protocol):
     """Insight / Media 研究角色节点所依赖的运行时上下文协议。具体实现InsightContext / MediaContext。"""
+    llm_client: LLMClient
+
+    output_dir: str
 
 
 class BaseNode(ABC):
