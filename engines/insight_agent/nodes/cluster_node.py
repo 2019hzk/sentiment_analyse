@@ -9,7 +9,6 @@ from loguru import logger
 from engines.common.nodes.base_node import BaseNode, ResearchNodeContext
 from engines.contracts.config import get_settings
 from engines.contracts.dimensions import dimension_for_key, get_insight_cluster_rules
-from engines.insight_agent.context import InsightContext
 from engines.insight_agent.evidence.models import EvidenceCluster, EvidenceRecord
 from engines.insight_agent.state import InsightState
 
@@ -87,7 +86,7 @@ class ClusterNode(BaseNode):
         text = f"{record.source_keyword} {record.content}"
         for dim_key, keywords in get_insight_cluster_rules().items():
             if any(k in text for k in keywords):
-                return f"cluster_{dim_key}"
+                return f"cluster_{dim_key}"   # cluster_background_overview
         return "cluster_other"
 
     # 策略 2: 基于 K-Means 的语义聚类
@@ -118,17 +117,22 @@ class ClusterNode(BaseNode):
 
     def _calculate_kmeans_labels(self, embeddings: Any, count: int) -> list[int]:
         from sklearn.cluster import KMeans
+        # k>=5(k固定是5 或者count//桶的最小数：INSIGHT_CLUSTER_MIN_CLUSTER_SIZE>5)
         k = self._determine_optimal_k(count)
-        return [int(l) for l in KMeans(n_clusters=k, n_init="auto", random_state=42).fit_predict(embeddings)]
+        # doc1    doc2   doc3   doc4  doc5
+        # [向量值  向量值  向量值  向量值 向量值]
+        # [0,      1,    0,      2,   1]
+        return [int(l) for l in KMeans(n_clusters=5, n_init="auto", random_state=42).fit_predict(embeddings)]
 
     def _determine_optimal_k(self, count: int) -> int:
         settings = get_settings()
+        # 理论值：理论桶数多少
         k = count // settings.INSIGHT_CLUSTER_MIN_CLUSTER_SIZE
         return max(2, min(settings.INSIGHT_CLUSTER_MAX_CLUSTERS, k, count))
 
     def _route_to_dimension(self, records: list[EvidenceRecord]) -> str:
         """计算簇中心与预置维度向量的余弦相似度，执行语义投递"""
-        sample = " ".join(r.content[:150] for r in records[:10])
+        sample = " ".join(r.content[:30] for r in records[:10])
         emb = _get_embedding_model().encode([sample], normalize_embeddings=True, show_progress_bar=False)
 
         keys, dimension_embs = _get_dimension_vector()
@@ -279,3 +283,6 @@ if __name__ == "__main__":
 
 
     asyncio.run(main())
+
+
+

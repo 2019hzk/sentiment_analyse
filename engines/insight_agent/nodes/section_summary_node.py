@@ -4,7 +4,6 @@ import json
 import time
 from typing import Any
 from loguru import logger
-
 from engines.common.nodes.base_node import BaseNode
 from engines.insight_agent.state import InsightState, InsightSection
 from engines.insight_agent.evidence.models import SectionEvidencePack
@@ -55,6 +54,7 @@ class SectionSummarizeNode(BaseNode):
 
         # 5. 发布章节就绪事件，并推进游标
         dispatch_section_ready_event(state, section_index, section)
+
         sections[section_index] = section
 
         logger.info(f"章节摘要生成完成: '{section.get('title')}' ({section.get('section_key')})")

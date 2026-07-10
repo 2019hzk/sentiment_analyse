@@ -12,6 +12,8 @@ from engines.contracts.roles import ROLE_INFOS, RoleInfo
 from engines.insight_agent.state import InsightState
 
 
+
+
 class FormatReportNode(BaseNode):
     """负责将已总结的章节列表整合为一份完整的、格式优美的研究报告。"""
 

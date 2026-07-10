@@ -9,7 +9,7 @@ from engines.insight_agent.nodes.section_plan_node import SectionPlanNode
 from engines.insight_agent.nodes.section_allocation_node import SectionAllocationNode
 from engines.insight_agent.nodes.section_summary_node import SectionSummarizeNode
 from engines.common.nodes.format_node import FormatReportNode
-from engines.common.nodes.save_report import SaveReportNode
+from engines.common.nodes.save_report_node import SaveReportNode
 
 
 def _route_after_summarize(state: InsightState) -> str:

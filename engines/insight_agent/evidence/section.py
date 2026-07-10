@@ -10,6 +10,7 @@ from engines.contracts.roles import ROLE_INFOS
 from engines.insight_agent.evidence.models import EvidenceStrength
 
 
+
 # ===== PlanNode 专属概览 =====
 
 def generate_plan_overview(pool: EvidencePool) -> dict[str, Any]:
@@ -36,7 +37,7 @@ def generate_plan_overview(pool: EvidencePool) -> dict[str, Any]:
 
     return {
         "total_records": len(pool.records),
-        "platform_distribution": dict(Counter(r.platform for r in pool.records if r.platform)),
+        "platform_distribution": dict(Counter(r.platform for r in pool.records)),
         "dimension_clusters": dimension_clusters,
     }
 
@@ -109,7 +110,7 @@ def _render_single_record(record: EvidenceRecord) -> str:
         f"点赞 {eng.likes} / 评论 {eng.comments} / 转发 {eng.shares} / "
         f"收藏 {eng.collects} / 回复 {eng.replies}",
         f"来源关键词: {record.source_keyword or ''}",
-        f"来源表: {record.source_table or ''}",
+        f"来源表: {record.source_table}",
         f"热度分: {record.hotness_score}",
         f"综合分: {record.final_score}",
         f"内容: {record.content}",

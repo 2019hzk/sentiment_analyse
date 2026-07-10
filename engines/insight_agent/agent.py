@@ -25,17 +25,18 @@ async def invoke_insight_agent(query: str,
     )
     graph = build_graph(context)
     print(graph.get_graph().draw_mermaid())  # 打印图结构
+    # print(graph.get_graph().draw_ascii())  # 打印图结构
 
     initial_state = {"query": query, "role": role}
 
-    await graph.ainvoke(initial_state, {"recursion_limit": 30})
+    await graph.ainvoke(initial_state)
 
     logger.info(f"Insight智能体研究完成")
 
 
 if __name__ == "__main__":
     async def run_min_test():
-        query = "高考难不难"
+        query = "NBA总决赛冠军是谁"
         role = "insight"
         output_dir = "data/report/insight"
         logger.info("开始测试私域智能体全链路执行...")

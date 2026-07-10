@@ -12,6 +12,7 @@ from engines.insight_agent.evidence.models import EvidencePool
 from engines.contracts.dimensions import get_insight_dimensions, DIMENSIONS
 from engines.insight_agent.evidence.section import generate_plan_overview
 
+
 from langchain_core.prompts import PromptTemplate
 
 

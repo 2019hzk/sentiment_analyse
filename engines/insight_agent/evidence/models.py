@@ -77,6 +77,8 @@ class EvidencePool:
     clusters: list[EvidenceCluster] = field(default_factory=list)
 
 
+
+
 @dataclass(slots=True)
 class SectionEvidencePack:
     """章节证据包(LLM 写作文本块  + 缺口说明)。"""

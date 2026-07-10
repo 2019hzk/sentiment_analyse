@@ -82,8 +82,8 @@ class Settings(BaseSettings):
     INSIGHT_CLUSTERING_ENABLED: bool = Field(True, description="是否为 InsightAgent 启用语义聚类")
     INSIGHT_CLUSTER_MODEL: Optional[str] = Field(None, description="用于语义聚类的 SentenceTransformer 模型路径或名称")
     INSIGHT_CLUSTER_MAX_RECORDS: int = Field(100, description="用于语义聚类的最大证据记录条数限制")
-    INSIGHT_CLUSTER_MAX_CLUSTERS: int = Field(12, description="最大允许划分的语义聚类簇数")
-    INSIGHT_CLUSTER_MIN_CLUSTER_SIZE: int = Field(3, description="期望的最小语义聚类簇大小")
+    INSIGHT_CLUSTER_MAX_CLUSTERS: int = Field(10, description="最大允许划分的语义聚类簇数，桶的数量")
+    INSIGHT_CLUSTER_MIN_CLUSTER_SIZE: int = Field(5, description="期望的最小语义聚类簇大小，桶的记录数量")
 
     model_config = SettingsConfigDict(
         env_file=ENV_FILE,

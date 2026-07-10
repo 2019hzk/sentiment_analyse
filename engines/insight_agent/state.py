@@ -9,7 +9,7 @@ class InsightSection(TypedDict, total=False):
 
     # 1. 章节规划信息 第一阶段:由PlanNode初始化时的规划信息
     title: str
-    goal: list[str]
+    goal: list[str]   # 目标
     section_key: str
 
     # 2. 章节写作结果 第二阶段:由SummarizeNode动态补充的写作结果与元数据

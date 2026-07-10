@@ -39,7 +39,7 @@ def build_retrieval_tasks(query: str) -> list[RetrievalQueryTask]:
             final_query.append(extract_kw)
     retrieval_tasks: list[RetrievalQueryTask] = []
     for keyword in final_query:
-        retrieval_tasks.append(RetrievalQueryTask(channel="keyword_recall", limit=5, channel_score=0.5, query=keyword))
+        retrieval_tasks.append(RetrievalQueryTask(channel="keyword_recall", limit=10, channel_score=0.5, query=keyword))
         retrieval_tasks.append(RetrievalQueryTask(channel="comment_recall", limit=5, channel_score=0.4, query=keyword))
 
     retrieval_tasks.append(RetrievalQueryTask(channel="hot_recall", channel_score=0.3, limit=5, query=query))
