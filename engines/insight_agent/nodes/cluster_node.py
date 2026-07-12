@@ -9,7 +9,7 @@ from loguru import logger
 from engines.common.nodes.base_node import BaseNode, ResearchNodeContext
 from engines.contracts.config import get_settings
 from engines.contracts.dimensions import dimension_for_key, get_insight_cluster_rules
-from engines.insight_agent.evidence.models import EvidenceCluster, EvidenceRecord
+from engines.insight_agent.evidence_processor import EvidenceCluster, EvidenceRecord
 from engines.insight_agent.state import InsightState
 
 
@@ -165,7 +165,7 @@ class ClusterNode(BaseNode):
 if __name__ == "__main__":
     import asyncio
     import traceback
-    from engines.insight_agent.evidence.models import EvidencePool, EvidenceRecord, Engagement, RetrievalMeta
+    from engines.insight_agent.evidence_processor  import EvidencePool, EvidenceRecord, Engagement, RetrievalMeta
 
 
     async def main():

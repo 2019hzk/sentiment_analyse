@@ -1,7 +1,7 @@
 """InsightAgent 私有舆情库研究模块：engines/insight_agent/state.py。"""
 from typing import TypedDict
-from engines.insight_agent.evidence.models import EvidencePool, EvidenceRecord
-from engines.insight_agent.evidence.section import EvidenceStrength
+from engines.insight_agent.evidence_processor  import EvidencePool, EvidenceRecord
+from engines.contracts.evidence.models import EvidenceStrength
 
 
 class InsightSection(TypedDict, total=False):

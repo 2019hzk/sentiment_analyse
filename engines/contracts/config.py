@@ -47,7 +47,7 @@ class Settings(BaseSettings):
     HOST_MODEL_PROVIDER: str = Field("openai", description="HostAgent 厂商(langchain provider)")
 
     # ================== Web 搜索 ==================
-    SEARCH_TOOL_TYPE: Literal["TavilyAPI", "AnspireAPI", "BochaAPI"] = Field(
+    SEARCH_SWITCH: Literal["TavilyAPI", "AnspireAPI", "BochaAPI"] = Field(
         "TavilyAPI", description="Web 搜索提供方"
     )
     TAVILY_API_KEY: Optional[str] = Field(None, description="Tavily API 密钥")

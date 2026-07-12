@@ -5,8 +5,7 @@ from loguru import logger
 
 from engines.common.nodes.base_node import BaseNode, ResearchNodeContext
 from engines.insight_agent.state import InsightState, InsightSection
-from engines.insight_agent.evidence.models import EvidencePool, EvidenceRecord
-from engines.insight_agent.evidence.section import generate_section_records
+from engines.insight_agent.evidence_processor  import EvidencePool, EvidenceRecord,generate_section_records
 
 
 class SectionAllocationNode(BaseNode):

@@ -6,8 +6,7 @@ from typing import Any
 from loguru import logger
 from engines.common.nodes.base_node import BaseNode
 from engines.insight_agent.state import InsightState, InsightSection
-from engines.insight_agent.evidence.models import SectionEvidencePack
-from engines.insight_agent.evidence.section import generate_section_evidence_pack, dispatch_section_ready_event
+from engines.insight_agent.evidence_processor  import SectionEvidencePack,generate_section_evidence_pack,dispatch_section_ready_event
 from engines.insight_agent.prompts import SUMMARY_SYSTEM_PROMPT, SUMMARY_USER_PROMPT_TEMPLATE
 from engines.common.llm.llm_output import clean_markdown_text
 

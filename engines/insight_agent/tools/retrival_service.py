@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from typing import Literal, Optional
 from loguru import logger
 
-from engines.insight_agent.evidence.models import EvidenceRecord, Engagement, RetrievalMeta
+from engines.contracts.evidence.models  import EvidenceRecord, Engagement, RetrievalMeta
 from engines.insight_agent.tools.db_search.repository import DatabaseSearchRepository
 from engines.insight_agent.tools.vector_search.repository import VectorSearchRepository
 from engines.insight_agent.tools.vector_search.search_results import SearchHit

@@ -8,9 +8,8 @@ from engines.common.nodes.base_node import BaseNode, ResearchNodeContext
 from engines.insight_agent.schemas import InsightResearchPlan
 from engines.insight_agent.state import InsightState, InsightSection
 from engines.insight_agent.prompts import PLAN_SYSTEM_PROMPT, PLAN_USER_PROMPT_TEMPLATE
-from engines.insight_agent.evidence.models import EvidencePool
+from engines.insight_agent.evidence_processor  import EvidencePool,generate_plan_overview
 from engines.contracts.dimensions import get_insight_dimensions, DIMENSIONS
-from engines.insight_agent.evidence.section import generate_plan_overview
 
 
 from langchain_core.prompts import PromptTemplate

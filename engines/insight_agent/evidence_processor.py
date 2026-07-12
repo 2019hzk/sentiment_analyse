@@ -1,17 +1,58 @@
-"""InsightAgent 章节证据选择、证据包构建与事件 payload 转换。"""
+from dataclasses import dataclass, field
+from typing import Any,Mapping
 from collections import Counter
-from typing import Any, Mapping
 from loguru import logger
-from engines.contracts.dimensions import dimension_for_key
-from engines.insight_agent.evidence.models import EvidencePool, EvidenceRecord, SectionEvidencePack
+
 from engines.common.eventing.publishers import publish_section_read_ready
 from engines.common.eventing.event import SectionReadyEvent
+from engines.contracts.evidence.render import render_evidence_records,evaluate_evidence_strength
+from engines.contracts.dimensions import dimension_for_key
+from engines.contracts.evidence.models import (
+    EvidenceRecord,
+    EvidenceStrength
+)
 from engines.contracts.roles import ROLE_INFOS
-from engines.insight_agent.evidence.models import EvidenceStrength
+
+
+# InsightAgent私有全局容器与聚合根
+@dataclass(slots=True)
+class EvidenceCluster:
+    """证据聚类簇（组）"""
+
+    # 簇基础描述
+    id: str
+    label: str
+    summary: str
+
+    # 簇成员
+    member_record_ids: list[str] = field(default_factory=list)
+    representative_ids: list[str] = field(default_factory=list)
+    size: int = 0
+
+
+@dataclass(slots=True)
+class EvidencePool:
+    """全局证据池。"""
+    query: str
+
+    # 资产清单
+    records: list[EvidenceRecord] = field(default_factory=list)
+    clusters: list[EvidenceCluster] = field(default_factory=list)
 
 
 
-# ===== PlanNode 专属概览 =====
+
+@dataclass(slots=True)
+class SectionEvidencePack:
+    """章节证据包(LLM 写作文本块  + 缺口说明)。"""
+    used_query: str = ""
+    evidence_count: int = 0
+    strength: EvidenceStrength = "missing"
+    evidence_source_blocks: list[str] = field(default_factory=list)
+
+
+
+
 
 def generate_plan_overview(pool: EvidencePool) -> dict[str, Any]:
     records_by_id = {r.id: r for r in pool.records if r.id}
@@ -87,46 +128,10 @@ def generate_section_evidence_pack(
     return SectionEvidencePack(
         used_query=used_query,
         evidence_count=count,
-        strength=_evaluate_evidence_strength(count),
-        evidence_source_blocks=_render_evidence_records(selected),
+        strength=evaluate_evidence_strength(count),
+        evidence_source_blocks=render_evidence_records(selected),
     )
 
-
-def _render_evidence_records(select_records: list[EvidenceRecord]) -> list[str]:
-    """ 保留条数截断"""
-    return [
-        _render_single_record(record)
-        for record in select_records[:30]
-    ]
-
-
-def _render_single_record(record: EvidenceRecord) -> str:
-    eng = record.engagement
-    lines = [
-        f"标题: {record.content[:30] or '无标题'}",
-        f"发布时间/抓取时间: {record.published_at or ''}",
-        f"平台: {record.platform or '未知'}",
-        "互动数据: "
-        f"点赞 {eng.likes} / 评论 {eng.comments} / 转发 {eng.shares} / "
-        f"收藏 {eng.collects} / 回复 {eng.replies}",
-        f"来源关键词: {record.source_keyword or ''}",
-        f"来源表: {record.source_table}",
-        f"热度分: {record.hotness_score}",
-        f"综合分: {record.final_score}",
-        f"内容: {record.content}",
-    ]
-    return "\n".join(lines)
-
-
-def _evaluate_evidence_strength(hit_count: int) -> EvidenceStrength:
-    """证据强度领域规则"""
-    if hit_count >= 10:
-        return "strong"
-    if hit_count >= 5:
-        return "medium"
-    if hit_count > 0:
-        return "weak"
-    return "missing"
 
 
 # ===== 发布章节内容事件构建 =====
@@ -138,7 +143,7 @@ def dispatch_section_ready_event(
         section: Mapping[str, Any]
 ) -> None:
     """
-    通用的章节就绪发布事件 适配Insight私域搜索专家 和 MediaAgent公域搜索专家
+    章节就绪发布事件 适配Insight私域搜索专家
     """
     role_key = state.get("role", "insight")
     role_info = ROLE_INFOS.get(role_key)
