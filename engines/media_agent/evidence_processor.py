@@ -9,7 +9,7 @@ from loguru import logger
 
 from engines.common.eventing.publishers import publish_section_read_ready
 from engines.common.eventing.event import SectionReadyEvent
-from engines.contracts.evidence.render import evaluate_evidence_strength, EvidenceStrength,render_evidence_records
+from engines.contracts.evidence.render import evaluate_evidence_strength, EvidenceStrength, render_evidence_records
 from engines.contracts.evidence.models import EvidenceRecord
 from engines.contracts.roles import ROLE_INFOS
 
@@ -21,8 +21,7 @@ class SectionEvidencePack:
     used_query: str
     evidence_count: int
     evidence_strength: EvidenceStrength = "missing"
-    evidence_source_blocks: list[str] =field(default_factory=list)
-
+    evidence_source_blocks: list[str] = field(default_factory=list)
 
 
 # 数据包构建
@@ -37,7 +36,6 @@ def generate_section_evidence_pack(
         evidence_source_blocks=render_evidence_records(records),
         evidence_strength=evaluate_evidence_strength(hit_count),
     )
-
 
 
 # 发布章节内容事件构建
@@ -60,6 +58,7 @@ def dispatch_section_ready_event(
 
         # 2. 构建章节准备发布事件数据包
         event = SectionReadyEvent(
+            source=role_key,   # "media"
             agent_name=agent_name,
             section_key=section.get("section_key", ""),
             section_index=section_index,

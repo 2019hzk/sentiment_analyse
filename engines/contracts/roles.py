@@ -36,3 +36,8 @@ ROLE_INFOS: dict[str, RoleInfo] = {
     )
 
 }
+
+
+def role_display_name(role: str) -> str:
+    info = ROLE_INFOS.get(role)
+    return info.display_name

@@ -4,8 +4,8 @@
 """
 
 from enum import Enum
-from typing import Any
-from pydantic import BaseModel,Field
+from typing import Any, Literal
+from pydantic import BaseModel, Field
 
 
 class EventType(str, Enum):
@@ -33,11 +33,20 @@ class RoleErrorEvent(BaseModel):
 
 
 class SectionReadyEvent(BaseModel):
+    source:str
     agent_name: str
     section_key: str
     section_index: int
     title: str = ""
     query: str = ""
     body: str = ""
-
     section_metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class HostDiscussionMessageEvent(BaseModel):
+    type: Literal["agent", "host", "system"] = "agent"
+    sender: str
+    content: str
+    timestamp: str = ""
+    source: str = ""
+    section_key: str = ""

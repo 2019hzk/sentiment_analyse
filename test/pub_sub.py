@@ -50,4 +50,3 @@ publish("weather", {"content":"今天天气真好","location":"Beijing"})
 insight_agent  ---》 host_agent
 insight_agent--->send("队列1",[发送数据])----->host_agent:consume("队列1")--->发送数据(处理):通信方式
 """
-

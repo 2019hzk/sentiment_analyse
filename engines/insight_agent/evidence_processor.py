@@ -158,6 +158,7 @@ def dispatch_section_ready_event(
 
         # 2. 构建章节准备发布事件数据包
         event = SectionReadyEvent(
+            source=role_key,
             agent_name=agent_name,
             section_key=section.get("section_key", ""),
             section_index=section_index,
