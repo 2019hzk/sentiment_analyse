@@ -1,1 +1,250 @@
 2026-07-04 09:05:14 | INFO | [insight] __main__ - 日志级别是info的消息
+2026-07-14 09:36:30 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 09:36:43 | ERROR | [insight] engines.insight_agent.tools.retrival_service - Vector检索失败,查询=高考 原因=<MilvusException: (code=2, message=Fail connecting to server on 192.168.200.125:19530, illegal connection params or server unavailable)>
+2026-07-14 09:36:43 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 开始进行证据记录的聚类...
+2026-07-14 09:36:43 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 聚类完成，共生成 5 个簇，分布情况: cluster_other: 12条, cluster_background_overview: 8条, cluster_platform_and_group_diff: 3条, cluster_heat_and_spread: 1条, cluster_deep_causes_and_impact: 1条
+2026-07-14 09:36:43 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:39:18 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 09:39:31 | ERROR | [insight] engines.insight_agent.tools.retrival_service - Vector检索失败,查询=高考 原因=<MilvusException: (code=2, message=Fail connecting to server on 192.168.200.125:19530, illegal connection params or server unavailable)>
+2026-07-14 09:39:31 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 开始进行证据记录的聚类...
+2026-07-14 09:39:31 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 聚类完成，共生成 5 个簇，分布情况: cluster_other: 12条, cluster_background_overview: 8条, cluster_platform_and_group_diff: 3条, cluster_heat_and_spread: 1条, cluster_deep_causes_and_impact: 1条
+2026-07-14 09:39:31 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:40:30 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 09:40:39 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 开始进行证据记录的聚类...
+2026-07-14 09:40:39 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 聚类完成，共生成 6 个簇，分布情况: cluster_other: 17条, cluster_background_overview: 8条, cluster_platform_and_group_diff: 3条, cluster_heat_and_spread: 2条, cluster_deep_causes_and_impact: 2条, cluster_sentiment_and_opinion: 2条
+2026-07-14 09:40:39 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:41:27 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 09:41:27 | INFO | [insight] engines.insight_agent.nodes.section_allocation_node - 开始进行章节证据分发【维度筛选】...
+2026-07-14 09:41:30 | INFO | [insight] engines.insight_agent.nodes.section_allocation_node - 章节证据调拨完成，分配情况: background_overview: 8条, heat_and_spread: 2条, sentiment_and_opinion: 2条, platform_and_group_diff: 3条, deep_causes_and_impact: 2条
+2026-07-14 09:41:30 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [1/5]: '事件背景与概览' (background_overview)...
+2026-07-14 09:41:36 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:background_overview 耗时:5.544 秒
+2026-07-14 09:41:36 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 09:41:36 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '事件背景与概览' (background_overview)
+2026-07-14 09:41:36 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [2/5]: '舆情热度与传播' (heat_and_spread)...
+2026-07-14 09:41:44 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:heat_and_spread 耗时:7.829 秒
+2026-07-14 09:41:44 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=2
+2026-07-14 09:41:44 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '舆情热度与传播' (heat_and_spread)
+2026-07-14 09:41:44 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [3/5]: '公众情感与观点' (sentiment_and_opinion)...
+2026-07-14 09:41:49 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:sentiment_and_opinion 耗时:5.858 秒
+2026-07-14 09:41:49 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinion index=2 hit_count=2
+2026-07-14 09:41:49 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '公众情感与观点' (sentiment_and_opinion)
+2026-07-14 09:41:49 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [4/5]: '平台与群体差异' (platform_and_group_diff)...
+2026-07-14 09:41:56 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:platform_and_group_diff 耗时:6.715 秒
+2026-07-14 09:41:56 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diff index=3 hit_count=3
+2026-07-14 09:41:56 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '平台与群体差异' (platform_and_group_diff)
+2026-07-14 09:41:56 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [5/5]: '深层原因与影响' (deep_causes_and_impact)...
+2026-07-14 09:42:03 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:deep_causes_and_impact 耗时:6.607 秒
+2026-07-14 09:42:03 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impact index=4 hit_count=2
+2026-07-14 09:42:03 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '深层原因与影响' (deep_causes_and_impact)
+2026-07-14 09:42:03 | INFO | [insight] engines.common.nodes.format_node - 开始执行最终报告排版 [私域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 09:43:09 | INFO | [insight] engines.common.nodes.format_node - 报告排版完成 [私域检索智能体专家]，最终交付文本共计 5618 字。
+2026-07-14 09:43:09 | INFO | [insight] engines.common.nodes.save_report_node - 开始执行报告落盘 [私域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 09:43:09 | INFO | [insight] engines.common.nodes.save_report_node - 报告落盘完成 [私域检索智能体专家],文件已成功保存至: insight_高考_20260714_094309.md
+2026-07-14 09:43:09 | INFO | [insight] engines.insight_agent.agent - Insight智能体研究完成
+2026-07-14 09:45:26 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 09:45:36 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 开始进行证据记录的聚类...
+2026-07-14 09:45:36 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 聚类完成，共生成 6 个簇，分布情况: cluster_other: 17条, cluster_background_overview: 8条, cluster_platform_and_group_diff: 3条, cluster_heat_and_spread: 2条, cluster_deep_causes_and_impact: 2条, cluster_sentiment_and_opinion: 2条
+2026-07-14 09:45:36 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:45:52 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 09:45:52 | INFO | [insight] engines.insight_agent.nodes.section_allocation_node - 开始进行章节证据分发【维度筛选】...
+2026-07-14 09:45:52 | INFO | [insight] engines.insight_agent.nodes.section_allocation_node - 章节证据调拨完成，分配情况: background_overview: 8条, heat_and_spread: 2条, sentiment_and_opinion: 2条, platform_and_group_diff: 3条, deep_causes_and_impact: 2条
+2026-07-14 09:45:52 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [1/5]: '事件背景与概览' (background_overview)...
+2026-07-14 09:45:58 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:background_overview 耗时:5.367 秒
+2026-07-14 09:45:58 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 09:45:58 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '事件背景与概览' (background_overview)
+2026-07-14 09:45:58 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [2/5]: '舆情热度与传播' (heat_and_spread)...
+2026-07-14 09:46:04 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:heat_and_spread 耗时:5.976 秒
+2026-07-14 09:46:04 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=2
+2026-07-14 09:46:04 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '舆情热度与传播' (heat_and_spread)
+2026-07-14 09:46:04 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [3/5]: '公众情感与观点' (sentiment_and_opinion)...
+2026-07-14 09:46:10 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:sentiment_and_opinion 耗时:6.852 秒
+2026-07-14 09:46:10 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinion index=2 hit_count=2
+2026-07-14 09:46:10 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '公众情感与观点' (sentiment_and_opinion)
+2026-07-14 09:46:10 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [4/5]: '平台与群体差异' (platform_and_group_diff)...
+2026-07-14 09:46:17 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:platform_and_group_diff 耗时:6.350 秒
+2026-07-14 09:46:17 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diff index=3 hit_count=3
+2026-07-14 09:46:17 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '平台与群体差异' (platform_and_group_diff)
+2026-07-14 09:46:17 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [5/5]: '深层原因与影响' (deep_causes_and_impact)...
+2026-07-14 09:46:23 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:deep_causes_and_impact 耗时:6.244 秒
+2026-07-14 09:46:23 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impact index=4 hit_count=2
+2026-07-14 09:46:23 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '深层原因与影响' (deep_causes_and_impact)
+2026-07-14 09:46:23 | INFO | [insight] engines.common.nodes.format_node - 开始执行最终报告排版 [私域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 09:47:39 | INFO | [insight] engines.common.nodes.format_node - 报告排版完成 [私域检索智能体专家]，最终交付文本共计 6256 字。
+2026-07-14 09:47:39 | INFO | [insight] engines.common.nodes.save_report_node - 开始执行报告落盘 [私域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 09:47:39 | INFO | [insight] engines.common.nodes.save_report_node - 报告落盘完成 [私域检索智能体专家],文件已成功保存至: insight_高考_20260714_094739.md
+2026-07-14 09:47:39 | INFO | [insight] engines.insight_agent.agent - Insight智能体研究完成
+2026-07-14 09:50:44 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 09:50:53 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 开始进行证据记录的聚类...
+2026-07-14 09:50:53 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 聚类完成，共生成 6 个簇，分布情况: cluster_other: 17条, cluster_background_overview: 8条, cluster_platform_and_group_diff: 3条, cluster_heat_and_spread: 2条, cluster_deep_causes_and_impact: 2条, cluster_sentiment_and_opinion: 2条
+2026-07-14 09:50:53 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:51:45 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 09:51:45 | INFO | [insight] engines.insight_agent.nodes.section_allocation_node - 开始进行章节证据分发【维度筛选】...
+2026-07-14 09:51:45 | INFO | [insight] engines.insight_agent.nodes.section_allocation_node - 章节证据调拨完成，分配情况: background_overview: 8条, heat_and_spread: 2条, sentiment_and_opinion: 2条, platform_and_group_diff: 3条, deep_causes_and_impact: 2条
+2026-07-14 09:51:45 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [1/5]: '事件背景与概览' (background_overview)...
+2026-07-14 09:51:51 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:background_overview 耗时:6.622 秒
+2026-07-14 09:51:51 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 09:51:51 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '事件背景与概览' (background_overview)
+2026-07-14 09:51:51 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [2/5]: '舆情热度与传播' (heat_and_spread)...
+2026-07-14 09:51:59 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:heat_and_spread 耗时:7.175 秒
+2026-07-14 09:51:59 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=2
+2026-07-14 09:51:59 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '舆情热度与传播' (heat_and_spread)
+2026-07-14 09:51:59 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [3/5]: '公众情感与观点' (sentiment_and_opinion)...
+2026-07-14 09:54:40 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 09:54:49 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 开始进行证据记录的聚类...
+2026-07-14 09:54:49 | INFO | [insight] engines.insight_agent.nodes.cluster_node - 聚类完成，共生成 6 个簇，分布情况: cluster_other: 17条, cluster_background_overview: 8条, cluster_platform_and_group_diff: 3条, cluster_heat_and_spread: 2条, cluster_deep_causes_and_impact: 2条, cluster_sentiment_and_opinion: 2条
+2026-07-14 09:54:49 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:55:17 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 09:55:17 | INFO | [insight] engines.insight_agent.nodes.section_allocation_node - 开始进行章节证据分发【维度筛选】...
+2026-07-14 09:55:17 | INFO | [insight] engines.insight_agent.nodes.section_allocation_node - 章节证据调拨完成，分配情况: background_overview: 8条, heat_and_spread: 2条, sentiment_and_opinion: 2条, platform_and_group_diff: 3条, deep_causes_and_impact: 2条
+2026-07-14 09:55:17 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [1/5]: '高考舆情概览：核心时间线与讨论焦点' (background_overview)...
+2026-07-14 09:55:47 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:background_overview 耗时:30.824 秒
+2026-07-14 09:55:47 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 09:55:47 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '高考舆情概览：核心时间线与讨论焦点' (background_overview)
+2026-07-14 09:55:47 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [2/5]: '高考话题传播热度分析' (heat_and_spread)...
+2026-07-14 09:56:56 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:heat_and_spread 耗时:68.497 秒
+2026-07-14 09:56:56 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=2
+2026-07-14 09:56:56 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '高考话题传播热度分析' (heat_and_spread)
+2026-07-14 09:56:56 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [3/5]: '公众情绪与核心观点洞察' (sentiment_and_opinion)...
+2026-07-14 09:57:16 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:sentiment_and_opinion 耗时:20.262 秒
+2026-07-14 09:57:16 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinion index=2 hit_count=2
+2026-07-14 09:57:16 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '公众情绪与核心观点洞察' (sentiment_and_opinion)
+2026-07-14 09:57:16 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [4/5]: '不同平台的话语场域差异比较' (platform_and_group_diff)...
+2026-07-14 09:58:10 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:platform_and_group_diff 耗时:53.735 秒
+2026-07-14 09:58:10 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diff index=3 hit_count=3
+2026-07-14 09:58:10 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '不同平台的话语场域差异比较' (platform_and_group_diff)
+2026-07-14 09:58:10 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 开始生成章节摘要 [5/5]: '高考的社会意涵变迁与深层影响' (deep_causes_and_impact)...
+2026-07-14 09:59:54 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - [insight私域检索专家] 章节写作章节:deep_causes_and_impact 耗时:103.980 秒
+2026-07-14 09:59:54 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impact index=4 hit_count=2
+2026-07-14 09:59:54 | INFO | [insight] engines.insight_agent.nodes.section_summary_node - 章节摘要生成完成: '高考的社会意涵变迁与深层影响' (deep_causes_and_impact)
+2026-07-14 09:59:54 | INFO | [insight] engines.common.nodes.format_node - 开始执行最终报告排版 [私域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 10:00:44 | INFO | [insight] engines.common.nodes.format_node - 报告排版完成 [私域检索智能体专家]，最终交付文本共计 4761 字。
+2026-07-14 10:00:44 | INFO | [insight] engines.common.nodes.save_report_node - 开始执行报告落盘 [私域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 10:00:44 | INFO | [insight] engines.common.nodes.save_report_node - 报告落盘完成 [私域检索智能体专家],文件已成功保存至: insight_高考_20260714_100044.md
+2026-07-14 10:00:44 | INFO | [insight] engines.insight_agent.agent - Insight智能体研究完成
+2026-07-14 10:22:20 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 10:22:29 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 10:25:54 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 10:39:08 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 10:39:18 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 10:40:27 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 10:40:49 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overviewhit_count=8
+2026-07-14 10:41:12 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spreadhit_count=2
+2026-07-14 10:42:42 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinionhit_count=2
+2026-07-14 10:43:05 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diffhit_count=3
+2026-07-14 10:43:25 | WARNING | [insight] engines.common.runtime.call_retry - 函数 generate_text 第 1 次尝试失败: Connection error.
+2026-07-14 10:43:25 | INFO | [insight] engines.common.runtime.call_retry - 将在 15.0 秒后进行第 2 次尝试...
+2026-07-14 10:44:33 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 10:44:42 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 10:45:01 | WARNING | [insight] engines.common.runtime.call_retry - 函数 generate_object 第 1 次尝试失败: Connection error.
+2026-07-14 10:45:01 | INFO | [insight] engines.common.runtime.call_retry - 将在 15.0 秒后进行第 2 次尝试...
+2026-07-14 10:45:36 | WARNING | [insight] engines.common.runtime.call_retry - 函数 generate_object 第 2 次尝试失败: Connection error.
+2026-07-14 10:45:36 | INFO | [insight] engines.common.runtime.call_retry - 将在 30.0 秒后进行第 3 次尝试...
+2026-07-14 10:46:26 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 10:46:54 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overviewhit_count=8
+2026-07-14 10:47:50 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spreadhit_count=2
+2026-07-14 10:48:13 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinionhit_count=2
+2026-07-14 10:48:34 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diffhit_count=3
+2026-07-14 10:48:54 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impacthit_count=2
+2026-07-14 10:48:54 | INFO | [insight] engines.common.nodes.format_node - 开始执行最终报告排版 [私域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 10:49:59 | INFO | [insight] engines.common.nodes.format_node - 报告排版完成 [私域检索智能体专家]，最终交付文本共计 4719 字。
+2026-07-14 10:49:59 | INFO | [insight] engines.common.nodes.save_report_node - 开始执行报告落盘 [私域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 10:49:59 | INFO | [insight] engines.common.nodes.save_report_node - 报告落盘完成 [私域检索智能体专家],文件已成功保存至: insight_高考_20260714_104959.md
+2026-07-14 10:49:59 | INFO | [insight] engines.insight_agent.agent - Insight智能体研究完成
+2026-07-14 10:53:40 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 10:53:49 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 10:54:14 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 10:54:37 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overviewhit_count=8
+2026-07-14 10:55:03 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spreadhit_count=2
+2026-07-14 10:55:22 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinionhit_count=2
+2026-07-14 10:55:46 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diffhit_count=3
+2026-07-14 10:56:11 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impacthit_count=2
+2026-07-14 10:56:11 | INFO | [insight] engines.common.nodes.format_node - 开始执行最终报告排版 [私域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 10:57:02 | INFO | [insight] engines.common.nodes.format_node - 报告排版完成 [私域检索智能体专家]，最终交付文本共计 4716 字。
+2026-07-14 10:57:02 | INFO | [insight] engines.common.nodes.save_report_node - 开始执行报告落盘 [私域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 10:57:02 | INFO | [insight] engines.common.nodes.save_report_node - 报告落盘完成 [私域检索智能体专家],文件已成功保存至: insight_高考_20260714_105702.md
+2026-07-14 10:57:02 | INFO | [insight] engines.insight_agent.agent - Insight智能体研究完成
+2026-07-14 11:33:11 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 11:33:20 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 11:33:48 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 11:34:11 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overviewhit_count=8
+2026-07-14 11:36:07 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 11:36:17 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 11:36:46 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 11:37:08 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overviewhit_count=8
+2026-07-14 11:37:28 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spreadhit_count=2
+2026-07-14 11:37:43 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinionhit_count=2
+2026-07-14 11:37:59 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diffhit_count=3
+2026-07-14 11:38:25 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impacthit_count=2
+2026-07-14 11:38:25 | INFO | [insight] engines.common.nodes.format_node - 开始执行最终报告排版 [私域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 11:39:17 | INFO | [insight] engines.common.nodes.format_node - 报告排版完成 [私域检索智能体专家]，最终交付文本共计 4588 字。
+2026-07-14 11:39:17 | INFO | [insight] engines.common.nodes.save_report_node - 开始执行报告落盘 [私域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 11:39:17 | INFO | [insight] engines.common.nodes.save_report_node - 报告落盘完成 [私域检索智能体专家],文件已成功保存至: insight_高考_20260714_113917.md
+2026-07-14 11:39:17 | INFO | [insight] engines.insight_agent.agent - Insight智能体研究完成
+2026-07-14 20:53:40 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 20:53:49 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 20:54:16 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 20:54:44 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overviewhit_count=8
+2026-07-14 20:55:06 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spreadhit_count=2
+2026-07-14 20:55:26 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinionhit_count=2
+2026-07-14 20:55:44 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diffhit_count=3
+2026-07-14 20:56:06 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impacthit_count=2
+2026-07-14 20:56:06 | INFO | [insight] engines.common.nodes.format_node - 开始执行最终报告排版 [私域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 20:57:09 | INFO | [insight] engines.common.nodes.format_node - 报告排版完成 [私域检索智能体专家]，最终交付文本共计 5459 字。
+2026-07-14 20:57:09 | INFO | [insight] engines.common.nodes.save_report_node - 开始执行报告落盘 [私域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 20:57:09 | ERROR | [insight] engines.common.nodes.save_report_node - [私域检索智能体专家] 报告落盘失败，出现异常: name 'save_md_report' is not defined
+2026-07-14 20:57:09 | ERROR | [insight] engines.orchestration.research - insight 研究智能体执行期间出现了异常: name 'save_md_report' is not defined
+2026-07-14 21:02:28 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 21:02:36 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 21:03:03 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 21:03:24 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overviewhit_count=8
+2026-07-14 21:03:50 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spreadhit_count=2
+2026-07-14 21:04:18 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinionhit_count=2
+2026-07-14 21:04:44 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diffhit_count=3
+2026-07-14 21:05:06 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impacthit_count=2
+2026-07-14 21:05:06 | INFO | [insight] engines.common.nodes.format_node - 开始执行最终报告排版 [私域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 21:06:01 | INFO | [insight] engines.common.nodes.format_node - 报告排版完成 [私域检索智能体专家]，最终交付文本共计 4801 字。
+2026-07-14 21:06:01 | INFO | [insight] engines.common.nodes.save_report_node - 开始执行报告落盘 [私域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 21:06:01 | INFO | [insight] engines.common.nodes.save_report_node - 报告落盘完成 [私域检索智能体专家],文件已成功保存至: insight_高考_20260714_210601.md
+2026-07-14 21:06:01 | INFO | [insight] engines.insight_agent.agent - Insight智能体研究完成
+2026-07-14 21:58:25 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 21:58:27 | ERROR | [insight] engines.orchestration.research - insight 研究智能体执行期间出现了异常: 'InsightContext' object has no attribute 'report_progress'
+2026-07-14 21:59:34 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 21:59:39 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 22:00:14 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 22:00:39 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overviewhit_count=8
+2026-07-14 22:00:58 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spreadhit_count=2
+2026-07-14 22:01:18 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinionhit_count=2
+2026-07-14 22:01:45 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diffhit_count=3
+2026-07-14 22:02:23 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impacthit_count=2
+2026-07-14 22:02:23 | INFO | [insight] engines.common.nodes.format_node - 开始执行最终报告排版 [私域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 22:03:15 | INFO | [insight] engines.common.nodes.format_node - 报告排版完成 [私域检索智能体专家]，最终交付文本共计 4310 字。
+2026-07-14 22:03:15 | INFO | [insight] engines.common.nodes.save_report_node - 开始执行报告落盘 [私域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 22:03:15 | INFO | [insight] engines.common.nodes.save_report_node - 报告落盘完成 [私域检索智能体专家],文件已成功保存至: data\report\insight\insight_高考_20260714_220315.md
+2026-07-14 22:03:15 | INFO | [insight] engines.insight_agent.agent - Insight智能体研究完成
+2026-07-14 22:16:44 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 22:16:50 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 22:17:25 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 22:17:50 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overviewhit_count=8
+2026-07-14 22:18:22 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spreadhit_count=2
+2026-07-14 22:18:43 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinionhit_count=2
+2026-07-14 22:19:00 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diffhit_count=3
+2026-07-14 22:19:25 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impacthit_count=2
+2026-07-14 22:19:25 | INFO | [insight] engines.common.nodes.format_node - 开始执行最终报告排版 [私域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 22:20:26 | INFO | [insight] engines.common.nodes.format_node - 报告排版完成 [私域检索智能体专家]，最终交付文本共计 4283 字。
+2026-07-14 22:20:26 | INFO | [insight] engines.common.nodes.save_report_node - 开始执行报告落盘 [私域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 22:20:26 | INFO | [insight] engines.common.nodes.save_report_node - 报告落盘完成 [私域检索智能体专家],文件已成功保存至: data\report\insight\insight_高考_20260714_222026.md
+2026-07-14 22:20:26 | INFO | [insight] engines.insight_agent.agent - Insight智能体研究完成
+2026-07-14 22:38:15 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 22:39:31 | INFO | [insight] engines.insight_agent.agent - Insight智能体开始研究: 高考
+2026-07-14 22:39:38 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 22:40:28 | INFO | [insight] engines.insight_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 22:40:56 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=background_overviewhit_count=8
+2026-07-14 22:41:24 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=heat_and_spreadhit_count=2
+2026-07-14 22:41:52 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinionhit_count=2
+2026-07-14 22:42:11 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diffhit_count=3
+2026-07-14 22:42:35 | INFO | [insight] engines.insight_agent.evidence_processor - [私域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impacthit_count=2
+2026-07-14 22:42:35 | INFO | [insight] engines.common.nodes.format_node - 开始执行最终报告排版 [私域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 22:43:40 | INFO | [insight] engines.common.nodes.format_node - 报告排版完成 [私域检索智能体专家]，最终交付文本共计 4761 字。
+2026-07-14 22:43:40 | INFO | [insight] engines.common.nodes.save_report_node - 开始执行报告落盘 [私域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 22:43:40 | INFO | [insight] engines.common.nodes.save_report_node - 报告落盘完成 [私域检索智能体专家],文件已成功保存至: data\report\insight\insight_高考_20260714_224340.md
+2026-07-14 22:43:40 | INFO | [insight] engines.insight_agent.agent - Insight智能体研究完成

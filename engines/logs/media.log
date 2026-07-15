@@ -1,0 +1,207 @@
+2026-07-14 09:36:30 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 09:36:30 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:39:18 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 09:39:19 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:40:30 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 09:40:30 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:41:41 | INFO | [media] engines.media_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 09:42:00 | INFO | [media] engines.media_agent.nodes.section_search_node - [media] 全局多维度检索完成，共执行 5 次独立检索。
+五个章节使用的最终搜索词:
+  - [source_search] 高考 教育部 高考政策 官方通报
+  - [realtime_search] 高考 高考热搜 微博 抖音
+  - [comprehensive_search] 高考 高考争议 吐槽 评价
+  - [comprehensive_search] 高考 高考报道 媒体评论 自媒体观点
+  - [comprehensive_search] 高考 高考改革 教育公平 社会影响
+共获取 40 条去重后的原始证据。
+2026-07-14 09:42:00 | INFO | [media] engines.media_agent.nodes.section_summary_node - 开始生成章节摘要 [1/5]: '高考风云：2026年全国高考基本盘与核心事实' (background_overview)...
+2026-07-14 09:42:33 | INFO | [media] engines.media_agent.nodes.section_summary_node - [media] 章节写作 section_key=background_overview 耗时:33.355 秒
+2026-07-14 09:42:33 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 09:42:33 | INFO | [media] engines.media_agent.nodes.section_summary_node - 开始生成章节摘要 [2/5]: '热搜上的高考：全网传播热度与扩散路径追踪' (heat_and_spread)...
+2026-07-14 09:45:26 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 09:45:27 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:46:06 | WARNING | [media] engines.common.runtime.call_retry - 函数 generate_object 第 1 次尝试失败: 2 validation errors for MediaResearchPlan
+sections.0.search_keywords
+  List should have at most 3 items after validation, not 4 [type=too_long, input_value=['2026高考', '政策', '分数线', '录取'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/too_long
+sections.1.search_keywords
+  List should have at most 3 items after validation, not 4 [type=too_long, input_value=['高考', '热搜', '状元', '作文题'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/too_long
+2026-07-14 09:46:06 | INFO | [media] engines.common.runtime.call_retry - 将在 15.0 秒后进行第 2 次尝试...
+2026-07-14 09:47:01 | INFO | [media] engines.media_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 09:47:23 | INFO | [media] engines.media_agent.nodes.section_search_node - [media] 全局多维度检索完成，共执行 5 次独立检索。
+五个章节使用的最终搜索词:
+  - [source_search] 高考 高考政策 教育部 官方通报
+  - [realtime_search] 高考 高考作文 查分 热搜
+  - [comprehensive_search] 高考 公平 争议 吐槽
+  - [comprehensive_search] 高考 媒体评论 报道角度 观点
+  - [comprehensive_search] 高考 教育改革 社会影响 争议
+共获取 40 条去重后的原始证据。
+2026-07-14 09:47:23 | INFO | [media] engines.media_agent.nodes.section_summary_node - 开始生成章节摘要 [1/5]: '高考的基本盘：政策、事实与权威信源' (background_overview)...
+2026-07-14 09:48:28 | INFO | [media] engines.media_agent.nodes.section_summary_node - [media] 章节写作 section_key=background_overview 耗时:65.752 秒
+2026-07-14 09:48:28 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 09:48:28 | INFO | [media] engines.media_agent.nodes.section_summary_node - 开始生成章节摘要 [2/5]: '高考热议：传播路径与热度演变' (heat_and_spread)...
+2026-07-14 09:50:44 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 09:50:44 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:51:57 | WARNING | [media] engines.common.runtime.call_retry - 函数 generate_object 第 1 次尝试失败: 2 validation errors for MediaResearchPlan
+sections.2.search_keywords
+  List should have at most 3 items after validation, not 4 [type=too_long, input_value=['高考公平', '争议', '吐槽', '建议'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/too_long
+sections.4.search_keywords
+  List should have at most 3 items after validation, not 4 [type=too_long, input_value=['高考改革', '社会...公平', '人工智能'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/too_long
+2026-07-14 09:51:57 | INFO | [media] engines.common.runtime.call_retry - 将在 15.0 秒后进行第 2 次尝试...
+2026-07-14 09:54:40 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 09:54:40 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 09:58:26 | INFO | [media] engines.media_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 09:58:48 | INFO | [media] engines.media_agent.nodes.section_search_node - [media] 全局多维度检索完成，共执行 5 次独立检索。
+五个章节使用的最终搜索词:
+  - [source_search] 高考 高考政策 教育部 考试大纲
+  - [realtime_search] 高考 高考作文 高考数学 微博热搜
+  - [comprehensive_search] 高考 高考公平 吐槽 争议
+  - [comprehensive_search] 高考 央视 澎湃 B站 高考
+  - [comprehensive_search] 高考 高考改革 社会阶层 人工智能教育
+共获取 40 条去重后的原始证据。
+2026-07-14 09:58:48 | INFO | [media] engines.media_agent.nodes.section_summary_node - 开始生成章节摘要 [1/5]: '高考风云：2026年全国高考基本盘与核心事实' (background_overview)...
+2026-07-14 09:59:20 | INFO | [media] engines.media_agent.nodes.section_summary_node - [media] 章节写作 section_key=background_overview 耗时:31.732 秒
+2026-07-14 09:59:20 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 09:59:20 | INFO | [media] engines.media_agent.nodes.section_summary_node - 开始生成章节摘要 [2/5]: '热搜上的高考：考后舆论场的引爆与扩散路径' (heat_and_spread)...
+2026-07-14 10:00:42 | INFO | [media] engines.media_agent.nodes.section_summary_node - [media] 章节写作 section_key=heat_and_spread 耗时:82.141 秒
+2026-07-14 10:00:42 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=8
+2026-07-14 10:00:42 | INFO | [media] engines.media_agent.nodes.section_summary_node - 开始生成章节摘要 [3/5]: '万千声音：公众对高考公平、命题与招生的多元态度' (sentiment_and_opinion)...
+2026-07-14 10:01:43 | INFO | [media] engines.media_agent.nodes.section_summary_node - [media] 章节写作 section_key=sentiment_and_opinion 耗时:60.934 秒
+2026-07-14 10:01:43 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinion index=2 hit_count=8
+2026-07-14 10:01:43 | INFO | [media] engines.media_agent.nodes.section_summary_node - 开始生成章节摘要 [4/5]: '多棱镜下的高考：不同媒体与群体的叙事焦点差异' (platform_and_group_diff)...
+2026-07-14 10:02:26 | INFO | [media] engines.media_agent.nodes.section_summary_node - [media] 章节写作 section_key=platform_and_group_diff 耗时:43.162 秒
+2026-07-14 10:02:26 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diff index=3 hit_count=8
+2026-07-14 10:02:26 | INFO | [media] engines.media_agent.nodes.section_summary_node - 开始生成章节摘要 [5/5]: '变革与反思：高考制度的深层逻辑与社会影响' (deep_causes_and_impact)...
+2026-07-14 10:02:54 | INFO | [media] engines.media_agent.nodes.section_summary_node - [media] 章节写作 section_key=deep_causes_and_impact 耗时:27.858 秒
+2026-07-14 10:02:54 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impact index=4 hit_count=8
+2026-07-14 10:02:54 | INFO | [media] engines.common.nodes.format_node - 开始执行最终报告排版 [公域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 10:04:14 | INFO | [media] engines.common.nodes.format_node - 报告排版完成 [公域检索智能体专家]，最终交付文本共计 6038 字。
+2026-07-14 10:04:14 | INFO | [media] engines.common.nodes.save_report_node - 开始执行报告落盘 [公域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 10:04:14 | INFO | [media] engines.common.nodes.save_report_node - 报告落盘完成 [公域检索智能体专家],文件已成功保存至: media_高考_20260714_100414.md
+2026-07-14 10:04:14 | INFO | [media] engines.media_agent.agent - Media智能体研究完成
+2026-07-14 10:22:20 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 10:22:21 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 10:23:46 | INFO | [media] engines.media_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 10:24:47 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 10:25:17 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=8
+2026-07-14 10:39:08 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 10:39:09 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 10:41:23 | INFO | [media] engines.media_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 10:42:49 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 10:44:33 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 10:44:34 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 10:45:00 | WARNING | [media] engines.common.runtime.call_retry - 函数 generate_object 第 1 次尝试失败: Connection error.
+2026-07-14 10:45:00 | INFO | [media] engines.common.runtime.call_retry - 将在 15.0 秒后进行第 2 次尝试...
+2026-07-14 10:45:40 | WARNING | [media] engines.common.runtime.call_retry - 函数 generate_object 第 2 次尝试失败: Connection error.
+2026-07-14 10:45:40 | INFO | [media] engines.common.runtime.call_retry - 将在 30.0 秒后进行第 3 次尝试...
+2026-07-14 10:46:42 | INFO | [media] engines.media_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 10:47:01 | WARNING | [media] engines.common.runtime.call_retry - 函数 _execute_search 第 1 次尝试失败: 
+2026-07-14 10:47:01 | INFO | [media] engines.common.runtime.call_retry - 将在 15.0 秒后进行第 2 次尝试...
+2026-07-14 10:47:35 | WARNING | [media] engines.common.runtime.call_retry - 函数 _execute_search 第 2 次尝试失败: 
+2026-07-14 10:47:35 | INFO | [media] engines.common.runtime.call_retry - 将在 30.0 秒后进行第 3 次尝试...
+2026-07-14 10:48:26 | WARNING | [media] engines.common.runtime.call_retry - 函数 _execute_search 第 1 次尝试失败: 
+2026-07-14 10:48:26 | INFO | [media] engines.common.runtime.call_retry - 将在 15.0 秒后进行第 2 次尝试...
+2026-07-14 10:49:00 | WARNING | [media] engines.common.runtime.call_retry - 函数 _execute_search 第 2 次尝试失败: 
+2026-07-14 10:49:00 | INFO | [media] engines.common.runtime.call_retry - 将在 30.0 秒后进行第 3 次尝试...
+2026-07-14 10:49:53 | WARNING | [media] engines.common.runtime.call_retry - 函数 _execute_search 第 3 次尝试失败: 
+2026-07-14 10:49:53 | INFO | [media] engines.common.runtime.call_retry - 将在 60.0 秒后进行第 4 次尝试...
+2026-07-14 10:51:12 | WARNING | [media] engines.common.runtime.call_retry - 函数 _execute_search 第 4 次尝试失败: 
+2026-07-14 10:51:12 | INFO | [media] engines.common.runtime.call_retry - 将在 120.0 秒后进行第 5 次尝试...
+2026-07-14 10:53:40 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 10:53:40 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 10:54:23 | INFO | [media] engines.media_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 10:55:18 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 10:55:50 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=8
+2026-07-14 10:56:21 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinion index=2 hit_count=8
+2026-07-14 10:56:50 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diff index=3 hit_count=8
+2026-07-14 10:57:19 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impact index=4 hit_count=8
+2026-07-14 10:57:19 | INFO | [media] engines.common.nodes.format_node - 开始执行最终报告排版 [公域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 11:33:11 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 11:33:11 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 11:33:47 | INFO | [media] engines.media_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 11:36:07 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 11:36:08 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 11:36:56 | INFO | [media] engines.media_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 11:38:49 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 11:39:19 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=8
+2026-07-14 11:40:07 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinion index=2 hit_count=8
+2026-07-14 11:40:44 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diff index=3 hit_count=8
+2026-07-14 11:41:14 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impact index=4 hit_count=8
+2026-07-14 11:41:14 | INFO | [media] engines.common.nodes.format_node - 开始执行最终报告排版 [公域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 11:42:29 | INFO | [media] engines.common.nodes.format_node - 报告排版完成 [公域检索智能体专家]，最终交付文本共计 6201 字。
+2026-07-14 11:42:29 | INFO | [media] engines.common.nodes.save_report_node - 开始执行报告落盘 [公域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 11:42:29 | INFO | [media] engines.common.nodes.save_report_node - 报告落盘完成 [公域检索智能体专家],文件已成功保存至: media_高考_20260714_114229.md
+2026-07-14 11:42:29 | INFO | [media] engines.media_agent.agent - Media智能体研究完成
+2026-07-14 20:53:40 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 20:53:41 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 20:55:09 | INFO | [media] engines.media_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 20:55:14 | WARNING | [media] engines.common.runtime.call_retry - 函数 _execute_search 第 1 次尝试失败: 
+2026-07-14 20:55:14 | INFO | [media] engines.common.runtime.call_retry - 将在 15.0 秒后进行第 2 次尝试...
+2026-07-14 20:56:25 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 20:57:02 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=8
+2026-07-14 20:57:51 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinion index=2 hit_count=8
+2026-07-14 20:58:40 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diff index=3 hit_count=8
+2026-07-14 20:59:11 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impact index=4 hit_count=8
+2026-07-14 20:59:11 | INFO | [media] engines.common.nodes.format_node - 开始执行最终报告排版 [公域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 21:00:11 | INFO | [media] engines.common.nodes.format_node - 报告排版完成 [公域检索智能体专家]，最终交付文本共计 5906 字。
+2026-07-14 21:00:11 | INFO | [media] engines.common.nodes.save_report_node - 开始执行报告落盘 [公域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 21:00:11 | ERROR | [media] engines.common.nodes.save_report_node - [公域检索智能体专家] 报告落盘失败，出现异常: name 'save_md_report' is not defined
+2026-07-14 21:00:11 | ERROR | [media] engines.orchestration.research - media 研究智能体执行期间出现了异常: name 'save_md_report' is not defined
+2026-07-14 21:02:28 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 21:02:28 | INFO | [media] engines.media_agent.nodes.section_plan_node - 开始进行章节规划，当前研究主题: '高考'...
+2026-07-14 21:03:39 | INFO | [media] engines.media_agent.nodes.section_plan_node - 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 21:04:38 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 21:05:10 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=8
+2026-07-14 21:05:55 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinion index=2 hit_count=8
+2026-07-14 21:06:37 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diff index=3 hit_count=8
+2026-07-14 21:07:10 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impact index=4 hit_count=8
+2026-07-14 21:07:10 | INFO | [media] engines.common.nodes.format_node - 开始执行最终报告排版 [公域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 21:08:31 | INFO | [media] engines.common.nodes.format_node - 报告排版完成 [公域检索智能体专家]，最终交付文本共计 7292 字。
+2026-07-14 21:08:31 | INFO | [media] engines.common.nodes.save_report_node - 开始执行报告落盘 [公域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 21:08:31 | INFO | [media] engines.common.nodes.save_report_node - 报告落盘完成 [公域检索智能体专家],文件已成功保存至: media_高考_20260714_210831.md
+2026-07-14 21:08:31 | INFO | [media] engines.media_agent.agent - Media智能体研究完成
+2026-07-14 21:58:25 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 21:58:25 | INFO | [media] engines.media_agent.nodes.section_plan_node - 公域检索智能体专家 开始进行章节规划，当前研究主题: '高考'
+2026-07-14 21:59:34 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 21:59:34 | INFO | [media] engines.media_agent.nodes.section_plan_node - 公域检索智能体专家 开始进行章节规划，当前研究主题: '高考'
+2026-07-14 22:00:30 | INFO | [media] engines.media_agent.nodes.section_plan_node - 公域检索智能体专家 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 22:03:22 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 22:04:04 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=8
+2026-07-14 22:04:45 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinion index=2 hit_count=8
+2026-07-14 22:05:28 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diff index=3 hit_count=8
+2026-07-14 22:06:06 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impact index=4 hit_count=8
+2026-07-14 22:06:06 | INFO | [media] engines.common.nodes.format_node - 开始执行最终报告排版 [公域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 22:07:11 | INFO | [media] engines.common.nodes.format_node - 报告排版完成 [公域检索智能体专家]，最终交付文本共计 6278 字。
+2026-07-14 22:07:11 | INFO | [media] engines.common.nodes.save_report_node - 开始执行报告落盘 [公域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 22:07:11 | INFO | [media] engines.common.nodes.save_report_node - 报告落盘完成 [公域检索智能体专家],文件已成功保存至: data\report\media\media_高考_20260714_220711.md
+2026-07-14 22:07:11 | INFO | [media] engines.media_agent.agent - Media智能体研究完成
+2026-07-14 22:16:44 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 22:16:45 | INFO | [media] engines.media_agent.nodes.section_plan_node - 公域检索智能体专家 开始进行章节规划，当前研究主题: '高考'
+2026-07-14 22:17:48 | INFO | [media] engines.media_agent.nodes.section_plan_node - 公域检索智能体专家 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 22:18:55 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 22:19:36 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=8
+2026-07-14 22:20:21 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinion index=2 hit_count=8
+2026-07-14 22:20:58 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diff index=3 hit_count=8
+2026-07-14 22:21:36 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impact index=4 hit_count=8
+2026-07-14 22:21:36 | INFO | [media] engines.common.nodes.format_node - 开始执行最终报告排版 [公域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 22:22:37 | INFO | [media] engines.common.nodes.format_node - 报告排版完成 [公域检索智能体专家]，最终交付文本共计 5195 字。
+2026-07-14 22:22:37 | INFO | [media] engines.common.nodes.save_report_node - 开始执行报告落盘 [公域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 22:22:37 | INFO | [media] engines.common.nodes.save_report_node - 报告落盘完成 [公域检索智能体专家],文件已成功保存至: data\report\media\media_高考_20260714_222237.md
+2026-07-14 22:22:37 | INFO | [media] engines.media_agent.agent - Media智能体研究完成
+2026-07-14 22:38:15 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 22:38:15 | INFO | [media] engines.media_agent.nodes.section_plan_node - 公域检索智能体专家 开始进行章节规划，当前研究主题: '高考'
+2026-07-14 22:39:31 | INFO | [media] engines.media_agent.agent - Media智能体开始研究: 高考
+2026-07-14 22:39:32 | INFO | [media] engines.media_agent.nodes.section_plan_node - 公域检索智能体专家 开始进行章节规划，当前研究主题: '高考'
+2026-07-14 22:40:19 | INFO | [media] engines.media_agent.nodes.section_plan_node - 公域检索智能体专家 章节规划完成，共规划 5 个章节信息，包含: background_overview, heat_and_spread, sentiment_and_opinion, platform_and_group_diff, deep_causes_and_impact
+2026-07-14 22:41:38 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=background_overview index=0 hit_count=8
+2026-07-14 22:42:07 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=heat_and_spread index=1 hit_count=8
+2026-07-14 22:42:47 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=sentiment_and_opinion index=2 hit_count=8
+2026-07-14 22:43:25 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=platform_and_group_diff index=3 hit_count=8
+2026-07-14 22:44:09 | INFO | [media] engines.media_agent.evidence_processor - [公域检索智能体专家] section_ready 已发布 section_key=deep_causes_and_impact index=4 hit_count=8
+2026-07-14 22:44:09 | INFO | [media] engines.common.nodes.format_node - 开始执行最终报告排版 [公域检索智能体专家]，关于舆论话题: '高考'，共 5 个章节等待整合...
+2026-07-14 22:45:09 | INFO | [media] engines.common.nodes.format_node - 报告排版完成 [公域检索智能体专家]，最终交付文本共计 5447 字。
+2026-07-14 22:45:09 | INFO | [media] engines.common.nodes.save_report_node - 开始执行报告落盘 [公域检索智能体专家]，准备保存报告: '高考'...
+2026-07-14 22:45:09 | INFO | [media] engines.common.nodes.save_report_node - 报告落盘完成 [公域检索智能体专家],文件已成功保存至: data\report\media\media_高考_20260714_224509.md
+2026-07-14 22:45:09 | INFO | [media] engines.media_agent.agent - Media智能体研究完成
